@@ -1,0 +1,511 @@
+<!DOCTYPE html><html lang="en" style="width: 1280px; height: 5273px; overflow: hidden; position: relative;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kith Craft - Artisanal &amp; Eco-Friendly Brand</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1c1b1b",
+                        "primary": "#000000",
+                        "outline-variant": "#c4c7c7",
+                        "tertiary": "#000000",
+                        "on-primary-container": "#858383",
+                        "surface-container": "#f1edec",
+                        "tertiary-fixed-dim": "#ffb59f",
+                        "on-primary-fixed": "#1c1b1b",
+                        "tertiary-fixed": "#ffdbd0",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fdf8f8",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-high": "#ebe7e6",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#63635f",
+                        "surface-bright": "#fdf8f8",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#e4e2dd",
+                        "surface-container-highest": "#e5e2e1",
+                        "secondary-container": "#e1dfdb",
+                        "on-surface-variant": "#444748",
+                        "on-tertiary-container": "#c56b4f",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "inverse-on-surface": "#f4f0ef",
+                        "primary-container": "#1c1b1b",
+                        "inverse-surface": "#313030",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#5f5e5e",
+                        "secondary-fixed-dim": "#c8c6c2",
+                        "outline": "#747878",
+                        "surface-dim": "#ddd9d8",
+                        "primary-fixed": "#e5e2e1",
+                        "on-surface": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#793019",
+                        "surface": "#fdf8f8",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#474744",
+                        "surface-container-low": "#f7f3f2",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-tertiary-fixed": "#3a0a00",
+                        "tertiary-container": "#3a0a00",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#5e5e5b",
+                        "surface-variant": "#e5e2e1",
+                        "on-secondary-fixed": "#1b1c19",
+                        "brand-bamboo": "#E2D7C5",
+                        "brand-clay": "#C86D51"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Playfair Display"],
+                        "button": ["Plus Jakarta Sans"],
+                        "headline-md": ["Playfair Display"],
+                        "label-caps": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(8px); }
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 2s infinite ease-in-out;
+        }
+    </style>
+<script>
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.material-symbols-outlined');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.textContent = 'add';
+                element.setAttribute('aria-expanded', 'false');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.textContent = 'remove';
+                element.setAttribute('aria-expanded', 'true');
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-primary antialiased font-body-md selection:bg-brand-clay selection:text-on-primary">
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden flex flex-col h-[60vh]"><img alt="Kith Craft Thai artisan workshop" class="absolute inset-0 w-full h-full object-cover z-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBOTQkx-JhLLA6gJ6fuTWZ2jY8h1gpc5hnZydLcTcNasLA_raNrj20IysIR79efH2AoSBG1Kj8vf85gMD_nSKm27ohhPY2XsOHdpSbZW_zrP5O8K_R-ApcBnA6N4sw_fzH1ESVOlxFwrBQQ0kgDNimh8mv1E0F5OLPsQ0-nb91AJAUFq8vKwk-WSDNNjhsMRXK_o2if5BBcLCiNyYzjAXiDZyOKQnQo8AaJwI6teCbb1O2WKi0YZDA6rWJBaaAYIvJ372Wgu1dvPz1_g"><div class="absolute inset-0 bg-primary/50 z-0"></div><header class="fixed top-0 left-0 w-full z-50 border-b border-white/10 px-6 lg:px-10 py-4 flex items-center justify-between whitespace-nowrap">
+<!-- Left Section: Primary Links -->
+<nav class="flex-1 flex items-center gap-6 lg:gap-8"><a class="text-xs sm:text-[13px] font-medium uppercase tracking-[0.12em] text-white font-semibold drop-shadow-sm hover:text-white/80 transition-all" href="#">Home</a><a class="text-xs sm:text-[13px] font-medium uppercase tracking-[0.12em] text-white font-semibold drop-shadow-sm hover:text-white/80 transition-all" href="#">Kith Story</a><a class="text-xs sm:text-[13px] font-medium uppercase tracking-[0.12em] text-white font-semibold drop-shadow-sm hover:text-white/80 transition-all" href="#">Collections</a><a class="text-xs sm:text-[13px] font-medium uppercase tracking-[0.12em] text-white font-semibold drop-shadow-sm hover:text-white/80 transition-all" href="#">Contact Us</a></nav>
+<!-- Center Section: Brand Logo -->
+<div class="flex-shrink-0">
+<a class="font-display-lg text-2xl md:text-3xl tracking-tight text-white hover:opacity-80 transition-opacity" href="#"><img alt="Kith Craft Logo" class="h-12 md:h-16 w-auto object-cover rounded-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_xm_B1g6QbGyEVcHMwQUIlrKz3__hu5BXuWcMRIxrfnqqmAJa0Wmme8bAE_OxmY5CbvmHFu5_EkFxHq0h52ttEsMRxVFMEAoKWu7jCLirXGL64Lyv5d4tW_8G2GJBa_yuh83REb-aUkXEdelfvfk4vRTeUHNzwXFSV_kmJllTw1DTzmELIFwyZZAsGJu0usKvt18T3mNIN9YLolk5-8qNZtqMLmYrRxseLc40ys4lE4CTQp26YKuEYjvDW9BCAFYgZxTb4I5fJFQyDQ"></a>
+</div>
+<!-- Right Section: Utility Actions -->
+<div class="flex-1 flex items-center justify-end gap-4 lg:gap-6">
+<button aria-label="Search" class="text-white hover:text-brand-bamboo transition-colors">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<div class="flex items-center">
+<button class="text-xs sm:text-[13px] font-medium uppercase tracking-[0.12em] text-white px-4 border-x border-white/20 hover:text-white/80 transition-all">
+                EN / TH
+            </button>
+</div>
+<a class="text-[10px] font-semibold uppercase tracking-widest text-white border border-white/80 rounded-full px-4 py-1.5 hover:bg-white hover:text-black transition-all" href="#">
+            ORDER ON FACEBOOK
+        </a>
+</div>
+</header><main class="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full mt-[-64px]"><div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-3xl mx-auto"><h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6 max-w-3xl mx-auto uppercase">We'd Love to Hear From You</h1><p class="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto">Whether you have a question about our collections, need guidance on caring for your handcrafted pieces, or wish to discuss a custom commission, our artisans are here to assist you with the utmost dedication.</p></div></main></section>
+<!-- Contact Channels Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-10 max-w-container-max mx-auto -mt-20 relative z-20"></section><section class="py-section-gap bg-background">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+<!-- Left: Contact Form -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-[32px] p-8 md:p-12 border border-secondary-fixed shadow-sm h-full">
+<h2 class="font-display-lg text-headline-md mb-8 uppercase">Send Us a Message</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">Full Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-brand-clay" placeholder="Your name" type="text">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">Email / Phone</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-brand-clay" placeholder="How can we reach you?" type="text">
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">Inquiry Type</label>
+<select class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-brand-clay">
+<option>Order Status</option>
+<option>Custom Artisan Request</option>
+<option>Upcycled Care</option>
+<option>Wholesale &amp; Press</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">Message</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-brand-clay" placeholder="Tell us more about your inquiry..." rows="5"></textarea>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-button text-button hover:bg-brand-clay transition-colors duration-300 flex items-center gap-2" type="submit">
+                        SEND MESSAGE <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Right: Studio Info -->
+<div class="lg:col-span-5 bg-surface-container rounded-[32px] p-10 flex flex-col gap-8 h-full">
+<div>
+<span class="bg-brand-clay/10 text-brand-clay px-3 py-1 rounded-full font-label-caps text-label-caps mb-4 inline-block">STUDIO INFORMATION</span>
+<div class="space-y-6">
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary mb-1">WORKING HOURS</h4>
+<p class="font-body-lg text-primary">Mon – Sat: 9:00 AM – 6:00 PM</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary mb-1">RESPONSE TIME</h4>
+<p class="font-body-lg text-primary">Within 24 hours</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary mb-1">CERTIFICATIONS</h4>
+<p class="font-body-md text-secondary">Proudly meeting OTOP and SACIT standards for Thai artisanal excellence.</p>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/30">
+<h3 class="font-display-lg text-2xl text-brand-clay mb-2">รักธรรมชาติ = รักตัวเอง</h3>
+<p class="font-body-md text-secondary italic">"To love nature is to love oneself. Our mission is to preserve Thai heritage through sustainable, upcycled craftsmanship."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-surface-container-low border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+<!-- Left Column: Image Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full grid-rows-2">
+<!-- Card 1: Material -->
+<a class="group relative block rounded-3xl overflow-hidden shadow-md h-full" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBjs4ThthdK80GookptuOQymUoSh6icL7TWG5XGoQtWV1bUh711U18NszztsaH4HV0eMsHJlkQjqREFSsCxHpy5N1KvnnMLZZWBgq_mrFMDyoSV5id4ELTMlqgMxHdd7fCRoEHS3ll95EcZNc-zYYH-59z09j-3Kbs_I0rG1IpSzIF7jtpcWOCqni0Mkfm0koY9MBlz0h6hhfnQdSsxh2Zg0ZekMSCMAziuC7vt8MWKLqznN49R8OghH-Vw6WXfnmySYqsu_PKTKRV1zg');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10 text-white">
+<h3 class="font-headline-sm text-headline-sm uppercase mb-4">FAQ Material</h3>
+<div class="inline-flex items-center gap-2 font-button text-button text-white/90 group-hover:text-white transition-colors">
+                            FIND OUT MORE <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</a>
+<!-- Card 2: Shipping -->
+<a class="group relative block rounded-3xl overflow-hidden shadow-md h-full" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMiixyv9UTkpIjfsdcKyobQ_hk_jx7BlskLvYd_sD7YqjtDUbCFyNY9nBATAoW91igoJojD9CWZxR7s7LCWwPve8U0UFKZmDiTx3YhTpv-bdQFOqcBTlPFGCNskzugSGgg-NR4trUMLza8Tm26_yR2hv9tnZqCPMKLS-2aE7cErKjH7gZytmazJu7YpoQFEB7JVTPDA0xjlAIUkXrf71ZMRBIF8v7zVSuIplOmAMM4Yiniif0QmuwrpQ3n0jgnOVy_fpKTrVOI6OEynA');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10 text-white">
+<h3 class="font-headline-sm text-headline-sm uppercase mb-4">FAQ Shipping &amp; Delivery</h3>
+<div class="inline-flex items-center gap-2 font-button text-button text-white/90 group-hover:text-white transition-colors">
+                            FIND OUT MORE <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</a>
+<!-- Card 3: Order & Pay -->
+<a class="group relative block rounded-3xl overflow-hidden shadow-md h-full" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFi5S1rF0uYETJszFU5ZPBhHN7gM1KNdsgOGRXdVVb8R258QTg7cOwYaIPBfCcPELSy2kSgH6cTQ9k2cUtjesPuR00IcZL4PI506yAGqrdZrypz3TsuvN-REbyoKoX5k260Bui0LB_3V1cKu9N4p30nU6tZPleps79gBFQFJLFyWFfgItnpHng5DSwlU4qYZ7JKnsF83ZklhydkuOlcCjAS2EldfapsSl8K96nfdkAGDwQrzTB3IWNd_jRPXZFXv0kX8WyWwx4xlgo4A');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10 text-white">
+<h3 class="font-headline-sm text-headline-sm uppercase mb-4">FAQ Order &amp; Pay</h3>
+<div class="inline-flex items-center gap-2 font-button text-button text-white/90 group-hover:text-white transition-colors">
+                            FIND OUT MORE <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</a>
+<!-- Card 4: Returns -->
+<a class="group relative block rounded-3xl overflow-hidden shadow-md h-full" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_5pwPIJDVrKonmJy-cqxU0k2DI3K1sO1uQIKpPLfnVN8tWhTGpv_kKGbDixcQ8xRhaGEWUHLQI8d23NdwwHV6Wm2v5beBP5pAJ-GC-MdtYk65aQ1C7AahABP6yFnZ0sDdQZxRq-R-RJ-68W7q__ycDs3BIGfVrZydkjvXe2So-k4RFHJ1Y1x4zXr2HeQh3KtgHBeSYm1b3A01iHg-E7FQKKfklDBuheGOV0gWFTp58zUjbFbjrQv4CFvNWWPesZ7drxa7xtV_nV-GdQ');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10 text-white">
+<h3 class="font-headline-sm text-headline-sm uppercase mb-4">FAQ Returns</h3>
+<div class="inline-flex items-center gap-2 font-button text-button text-white/90 group-hover:text-white transition-colors">
+                            FIND OUT MORE <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</a>
+</div>
+<!-- Right Column: Accordion & Contact -->
+<div class="lg:sticky lg:top-8 bg-surface rounded-3xl p-8 md:p-12 shadow-sm border border-outline-variant/30 flex flex-col h-full">
+<!-- Header -->
+<div class="flex items-center gap-4 mb-8">
+<div class="w-6 h-6 bg-primary rounded-sm"></div>
+<h2 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">
+                        MOST FREQUENTLY ASKED QUESTIONS
+                    </h2>
+</div>
+<!-- Accordion List -->
+<div class="space-y-4 flex-1">
+<!-- Q1 -->
+<div class="border-b border-outline-variant/40 pb-4">
+<button aria-controls="faq1" aria-expanded="false" class="flex justify-between items-center w-full text-left font-headline-sm text-headline-sm text-primary py-2 hover:text-brand-clay transition-colors" onclick="toggleAccordion(this)">
+<span class="">Are Kith Craft bags completely handmade?</span>
+<span class="material-symbols-outlined shrink-0 ml-4">add</span>
+</button>
+<div class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out" id="faq1">
+<p class="font-body-md text-body-md text-primary/80 pt-4 pb-2">
+                                Yes, every Kith Craft piece is meticulously handcrafted by local Thai artisans. We take pride in preserving traditional techniques, particularly hand embroidery, ensuring each bag is unique.
+                            </p>
+</div>
+</div>
+<!-- Q2 -->
+<div class="border-b border-outline-variant/40 pb-4">
+<button aria-controls="faq2" aria-expanded="false" class="flex justify-between items-center w-full text-left font-headline-sm text-headline-sm text-primary py-2 hover:text-brand-clay transition-colors" onclick="toggleAccordion(this)">
+<span class="">What materials are used in your products?</span>
+<span class="material-symbols-outlined shrink-0 ml-4">add</span>
+</button>
+<div class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out" id="faq2">
+<p class="font-body-md text-body-md text-primary/80 pt-4 pb-2">
+                                We prioritize sustainability by using upcycled genuine leather and other high-quality, eco-friendly materials sourced locally. Our products meet OTOP and SACIT standards for quality and durability.
+                            </p>
+</div>
+</div>
+<!-- Q3 -->
+<div class="border-b border-outline-variant/40 pb-4">
+<button aria-controls="faq3" aria-expanded="false" class="flex justify-between items-center w-full text-left font-headline-sm text-headline-sm text-primary py-2 hover:text-brand-clay transition-colors" onclick="toggleAccordion(this)">
+<span class="">Can I request a custom design?</span>
+<span class="material-symbols-outlined shrink-0 ml-4">add</span>
+</button>
+<div class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out" id="faq3">
+<p class="font-body-md text-body-md text-primary/80 pt-4 pb-2">
+                                We occasionally accept custom orders depending on our artisans' availability and the complexity of the request. Please contact us directly via Facebook to discuss your ideas.
+                            </p>
+</div>
+</div>
+<!-- Q4 -->
+<div class="border-b border-outline-variant/40 pb-4">
+<button aria-controls="faq4" aria-expanded="false" class="flex justify-between items-center w-full text-left font-headline-sm text-headline-sm text-primary py-2 hover:text-brand-clay transition-colors" onclick="toggleAccordion(this)">
+<span class="">How do I care for my upcycled leather bag?</span>
+<span class="material-symbols-outlined shrink-0 ml-4">add</span>
+</button>
+<div class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out" id="faq4">
+<p class="font-body-md text-body-md text-primary/80 pt-4 pb-2">
+                                Keep it away from prolonged direct sunlight and moisture. Clean gently with a soft, dry cloth. For deeper cleaning or conditioning, use products specifically designed for genuine leather.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Contact Callout -->
+<div class="mt-10 p-6 border-2 border-primary rounded-2xl text-center bg-white">
+<p class="font-body-lg text-body-lg text-primary mb-4">Still have questions?</p>
+<a class="inline-flex bg-primary text-white px-8 py-3 rounded-full font-button text-button hover:bg-brand-clay transition-colors duration-300" href="#">
+                        CONTACT US
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: PROMOTIONAL BANNER -->
+<!-- SECTION 4: CRAFTED WITH PURPOSE & HERITAGE -->
+<!-- Bento Grid Section -->
+<section class="py-20 bg-surface-container-low border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1: Text -->
+<div class="bg-[#F9F9F9] rounded-[24px] sm:rounded-[32px] p-8 flex flex-col justify-center items-center text-center h-full aspect-square md:aspect-auto">
+<h3 class="font-body-lg text-body-lg text-neutral-900 font-medium mb-2">Craft Shapes Story</h3>
+<p class="font-body-md text-body-md text-neutral-500 font-light mb-4">Handmade for everyday life.</p>
+<a class="text-neutral-900 uppercase tracking-wider underline hover:text-neutral-600 transition-colors text-sm font-semibold" href="/collections">SEE OUR COLLECTION →</a>
+</div>
+<!-- Card 2: Image -->
+<a class="relative group rounded-3xl overflow-hidden aspect-square h-full block" href="/collections">
+<img alt="Terracotta mushroom lamp" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1l6At917Nx7o4Ga4qOPaG75TqGpOMKaLsgmIm09c9-l1hztiL2vq7AKg92viBHEtaajX13W8c8-y8SgVzSuJe_8NBUkNHDio4MMuqNOpEbJUM15RNpJ62KoEaeMwZhLxQXZQCei9tJh2i5Ju8UqNqxBmhzFwDbwhAxZ3ka91Rbzt-mEXadaVSUAdzYHhHuvHjt1gcjrwnVhBGjhXoeL_4bwMyoRbqkrVDhrZZ_cBNqioLamOL6rbrsKN_QTTXAXXnWzsiPT1DGkAvoA">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="bg-white/90 text-neutral-900 px-6 py-2 rounded-full font-label-caps text-label-caps tracking-widest shadow-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Collection</span>
+</div>
+</a>
+<!-- Card 3: Image -->
+<a class="relative group rounded-3xl overflow-hidden aspect-square h-full block" href="/collections">
+<img alt="Ribbed cream lamp" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7gvU_SO8PKsQf6dD55adTD23o0lM1OagYNTwNMoxuWqH0-ORfdYrA6M5rY21cN1d2FpJG9ZWsh-3zo6FUdLiLzALsS0SgQemHUMnHXXfNELohpuxQOskMHcU7Pg8ghbt6H0-bIf737dZak6JHF-JG6oF4QBXh09zndhZjCCXchP82IzuOYWpMkaPLXI-9J8XNvgg5lTNWkLD4_HPS90jQuh9cFaAx8OHlKg-fqfgK4SmakeYUQPg16TUdqAmTZylXc8c5GMUb6y6OUQ">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="bg-white/90 text-neutral-900 px-6 py-2 rounded-full font-label-caps text-label-caps tracking-widest shadow-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Collection</span>
+</div>
+</a>
+<!-- Card 4: Image -->
+<a class="relative group rounded-3xl overflow-hidden aspect-square h-full block" href="/collections">
+<img alt="Vertical fluted lamp" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsweAHtdAL83hdzIqbrcc8RRbEpKl1AR_S4zIP-5XgFinOFIyu9CxKmRyup16UgosDNpODW0Qz_f-GHVKwC52KbK2P5y4WqTX8eJ6F9-pqjEFEIup1pmPABMPBN9MmxZZA3dgng3N4BU4PqzS-c6CYXgiDL0Epz_RDJwbAztMQSw1jq6gyHozibBLBrBMlrE6TyOA2G6PtyyAsNNbOi9nFY6TBmcEA9pd5mHm508g5hYUMGrTDwMlF_13eKNq2rtfoltrLaUT0qHNlqw">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="bg-white/90 text-neutral-900 px-6 py-2 rounded-full font-label-caps text-label-caps tracking-widest shadow-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Collection</span>
+</div>
+</a>
+<!-- Card 5: Image -->
+<a class="relative group rounded-3xl overflow-hidden aspect-square h-full block" href="/collections">
+<img alt="Double-globe stacked lamp" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbqMNgUKeP1pmgtAj-PrjE_hNNssMDFC1ZYwt_Gr7PzCshDgyOsB_AIE1aQmlfQNsWsQ7OEMCoCEq49EqEvGcuCBRqky7_PYDJAthyC3nVzmQqcfsmHPeyT_CUQNie04xbvAXk-A57ZG7N3Qq2FW5_c0aT09xsbhP0hJR54w7jTRU0imaqwjtKc1i0tF7ouXWjOT6a_68E3OOlmG74ROUDAT37kJJRrWSWRZ5_gGq1DJmtk7oqjT1IpHkDswRfY8DZP054JsdMHAU43w">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="bg-white/90 text-neutral-900 px-6 py-2 rounded-full font-label-caps text-label-caps tracking-widest shadow-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Collection</span>
+</div>
+</a>
+<!-- Card 6: Image -->
+<a class="relative group rounded-3xl overflow-hidden aspect-square h-full block" href="/collections">
+<img alt="Cylindrical tripod lamp" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs_N_Uvnj2pc5y4aErb5WHc987SSu95uldjyNBFA8O3wOsn03YViXxPRmWxq6H4Cd0wXKFpRvm1Yme9TZZytWB3tg6Lgar_b3LTMzxhOqpX7Xacnyg2thO1nS4j8koES6nDJGcUoqJQVPtIgAOgWNAheErwGcy1NHQ5qpRantC9YtwkDkLAkfhxPI7BL1Q2sPMnNZCei4hmlQMcTb4ac9NgzxH-dPe00FAwQ8tAXhKue-oT325e6yj9Kr7zb6vQILXOTSr6tUtXXAfSQ">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="bg-white/90 text-neutral-900 px-6 py-2 rounded-full font-label-caps text-label-caps tracking-widest shadow-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Collection</span>
+</div>
+</a>
+<!-- Card 7: Text -->
+<div class="bg-[#F9F9F9] rounded-[24px] sm:rounded-[32px] p-8 flex flex-col justify-center items-center text-center h-full aspect-square md:aspect-auto">
+<h3 class="font-body-lg text-body-lg text-neutral-900 font-medium mb-2">รักธรรมชาติ = รักตัวเอง</h3>
+<p class="font-body-md text-body-md text-neutral-500 font-light mb-4">งานแฮนด์เมดคุณค่าจากภูมิปัญญาไทย</p>
+<a class="inline-block bg-neutral-900 text-white rounded-full px-5 py-2 hover:bg-neutral-700 transition-colors text-sm font-button" href="/collections">ดู คอลเลกชัน ทั้งหมด →</a>
+</div>
+<!-- Card 8: Image -->
+<a class="relative group rounded-3xl overflow-hidden aspect-square h-full block" href="/collections">
+<img alt="Yellow dome lamp" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3N6Q6vS8_bCRtba_gy5yhlkc_F-C4eKB8RIzu7LdZwKf92rzcTKV1_L2QqJcQiD4sKMTQYNh9yK0sQTPiwGFYn-m9_DwWERk-rrYiYapghDoTVD8voV4M4vgElGWB07bkC78mG92rYWaFFh0xLGeS98iXCjr4RLhgYDtgda6id9EY4E1U9dhzR3ebPwFat0xEiTAN8JcthQD2pVxuq5t0UnpqfT_86lzmeOWWae7V3wslQZEKW1mEqtLIYWoz01028QpSh7cRsoI6Eg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="bg-white/90 text-neutral-900 px-6 py-2 rounded-full font-label-caps text-label-caps tracking-widest shadow-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Collection</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer incorporating Mountain Silhouette Banner -->
+<footer class="w-full flex flex-col bg-inverse-surface">
+<!-- Mountain Silhouette Banner -->
+<div class="relative w-full h-[200px] md:h-[300px] bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdvR_76dfOCaQuWWgJZaaBcqLf0wXRUn4xFmLqm9ZzFB12_QkhVQt9j6f8-JCawYDTvjE3mgSGrBhCu0aXR2NkoQc-u8HnTBvNYB1Rv0oFucu1iDz2GdKq4dypPOm6eZ8IFq81hjN1JLEdmz0HJvN1mM4g2t-LMf7WcUzSuxB0f_Z1vLW5NgJx82KS332w5h9alAf7TP1hqfVodUrKc0e3rUZRZ26Yi0COEHyBaYJrLKlM6sZJFbUt');">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-inverse-surface"></div>
+</div>
+<!-- Multi-column Footer -->
+<div class="bg-inverse-surface text-inverse-on-surface pt-8 pb-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<!-- Column 1: About -->
+<div>
+<h4 class="font-headline-sm text-[18px] font-semibold mb-6 text-on-primary">ABOUT KITH CRAFT</h4>
+<p class="font-body-md text-sm text-inverse-on-surface/80 leading-relaxed mb-6">
+                        Kith Craft brings together traditional Thai craftsmanship, upcycled genuine leather, and modern design. Every bag carries a story of community, dignity, and sustainable Thai creativity.
+                    </p>
+</div>
+<!-- Column 2: Collections -->
+<div>
+<h4 class="font-headline-sm text-[18px] font-semibold mb-6 text-on-primary">KITH CRAFT COLLECTIONS</h4>
+<ul class="space-y-4 font-body-md text-sm text-inverse-on-surface/80">
+<li class=""><a class="hover:text-brand-bamboo transition-colors" href="#">Shoulder Bags</a></li>
+<li class=""><a class="hover:text-brand-bamboo transition-colors" href="#">Embroidered Clutches</a></li>
+<li class=""><a class="hover:text-brand-bamboo transition-colors" href="#">Leather Wallets</a></li>
+<li class=""><a class="hover:text-brand-bamboo transition-colors" href="#">Eco Accessories</a></li>
+<li class=""><a class="hover:text-brand-bamboo transition-colors" href="#">Decorations</a></li>
+</ul>
+</div>
+<!-- Column 3: Service Policy -->
+<div>
+<h4 class="font-headline-sm text-[18px] font-semibold mb-6 text-on-primary">SERVICE POLICY</h4>
+<ul class="space-y-4 font-body-md text-sm text-inverse-on-surface/80">
+<li class=""><a class="hover:text-brand-bamboo transition-colors" href="#">Material Information</a></li>
+<li class=""><a class="hover:text-brand-bamboo transition-colors" href="#">Shipping &amp; Delivery</a></li>
+<li class=""><a class="hover:text-brand-bamboo transition-colors" href="#">Order &amp; Payment</a></li>
+<li class=""><a class="hover:text-brand-bamboo transition-colors" href="#">Returns &amp; Exchanges</a></li>
+<li class=""><a class="hover:text-brand-bamboo transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<!-- Column 4: Contact Us -->
+<div>
+<h4 class="font-headline-sm text-[18px] font-semibold mb-6 text-on-primary">CONTACT US</h4>
+<ul class="space-y-4 font-body-md text-sm text-inverse-on-surface/80">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+<span class="">123 Artisan Way, Chiang Mai, Thailand</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">business</span>
+<span class="">+66 123 456 789</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<a class="hover:text-brand-bamboo transition-colors" href="mailto:hello@kithcraft.com">hello@kithcraft.com</a>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">work</span>
+<a class="hover:text-brand-bamboo transition-colors" href="#">Careers &amp; Collabs</a>
+</li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="border-t border-surface-tint/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<h2 class="font-display-lg text-2xl md:text-3xl font-bold text-on-primary uppercase tracking-widest">KITH CRAFT</h2>
+<p class="font-body-md text-sm text-inverse-on-surface/60">
+                    © 2024 Kith Craft. All rights reserved.
+                </p>
+<button aria-label="Scroll to top" class="w-10 h-10 rounded-full bg-surface-tint/30 flex items-center justify-center hover:bg-brand-bamboo hover:text-primary transition-colors text-on-primary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+<script>
+function toggleAccordion(element) {
+    const content = element.nextElementSibling;
+    const icon = element.querySelector('.material-symbols-outlined');
+    const isExpanded = element.getAttribute('aria-expanded') === 'true';
+
+    // Close all other accordions in the same list
+    const parent = element.closest('.space-y-4');
+    parent.querySelectorAll('button').forEach(btn => {
+        if (btn !== element) {
+            btn.setAttribute('aria-expanded', 'false');
+            btn.nextElementSibling.style.maxHeight = null;
+            btn.querySelector('.material-symbols-outlined').textContent = 'add';
+        }
+    });
+
+    if (isExpanded) {
+        element.setAttribute('aria-expanded', 'false');
+        content.style.maxHeight = null;
+        icon.textContent = 'add';
+    } else {
+        element.setAttribute('aria-expanded', 'true');
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.textContent = 'remove';
+    }
+}
+</script>
+
+
+</body></html>
